@@ -9,13 +9,25 @@ public class Player : MonoBehaviour
     //{
 
     //}
-    public float speed;
+
     public bool isTouch_Top;
     public bool isTouch_Bottom;
     public bool isTouch_Right;
     public bool isTouch_Left;
 
+    public float speed;
+    public int power;
+    //장전속도
+    public float maxShotDelay;
+    public float curShotDelay;
+
+    
+
+    public GameObject bulletObjectA;
+    public GameObject bulletObjectB;
+
     Animator animator;
+
 
     private void Awake()
     {
@@ -24,6 +36,61 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+        FireBullet();
+    }
+
+    void FireBullet()
+    {
+        if(Input.GetButton("Fire1"))
+        //if (Input.GetKey(KeyCode.Space))
+        {
+            if (Time.time > curShotDelay)
+            {
+                curShotDelay = Time.time + maxShotDelay;
+                switch (power)
+                {
+                    case 1:
+                        {
+                            GameObject bullet = Instantiate(bulletObjectA, transform.position, transform.rotation);
+                            Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
+                            rigid.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                            
+                        }
+                        break;
+                    case 2:
+                        {
+                            GameObject bullet_R = Instantiate(bulletObjectA, transform.position + Vector3.right * 0.1f, transform.rotation);
+                            Rigidbody2D rigid_R = bullet_R.GetComponent<Rigidbody2D>();
+                            rigid_R.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                            GameObject bullet_L = Instantiate(bulletObjectA, transform.position + Vector3.left * 0.1f, transform.rotation);
+                            Rigidbody2D rigid_L = bullet_L.GetComponent<Rigidbody2D>();
+                            rigid_L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                        }
+                        break;
+                    case 3:
+                        {
+                            GameObject bullet_R = Instantiate(bulletObjectA, transform.position + Vector3.right * 0.25f, transform.rotation);
+                            Rigidbody2D rigid_R = bullet_R.GetComponent<Rigidbody2D>();
+                            rigid_R.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+
+                            GameObject bullet_L = Instantiate(bulletObjectA, transform.position + Vector3.left * 0.25f, transform.rotation);
+                            Rigidbody2D rigid_L = bullet_L.GetComponent<Rigidbody2D>();
+                            rigid_L.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+
+                            GameObject bullet_C = Instantiate(bulletObjectB, transform.position, transform.rotation);
+                            Rigidbody2D rigid_C = bullet_C.GetComponent<Rigidbody2D>();
+                            rigid_C.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+                        }
+                        break;
+
+                }
+            }
+        }
+    }
+
+    void MovePlayer()
     {
         float h = Input.GetAxisRaw("Horizontal");
         if ((isTouch_Right && h == 1) || (isTouch_Left && h == -1))
