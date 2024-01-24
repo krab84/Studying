@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public bool isTouch_Right;
     public bool isTouch_Left;
 
+    public int life;
+    public int score;
     public float speed;
     public int power;
     //장전속도
@@ -27,6 +29,8 @@ public class Player : MonoBehaviour
     public GameObject bulletObjectB;
 
     public GameManager gameManager;
+
+    public bool isHit;
 
     Animator animator;
 
@@ -158,11 +162,23 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "EnemyBullet"
             || collision.gameObject.tag == "Enemy")
         {
-            //게임매니저가 살리도록함
-            gameManager.RespawnPlayer();
+            if (isHit)
+                return;
+            isHit = true;
+            gameManager.UpdateLifeIcon(--life);
+            if (life == 0)
+            {
+                gameManager.GameOver();
+            }
+            else
+            {
+                //게임매니저가 살리도록함
+                gameManager.RespawnPlayer();
+            }
             gameObject.SetActive(false);
-            //Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
         }
     }
+
 
 }

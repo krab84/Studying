@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
 public class Enemy : MonoBehaviour
 {
     public string enemyName;
+    public int enemyScore;
     public float speed;
     public int health;
     public Sprite[] sprites;
@@ -86,6 +87,8 @@ public class Enemy : MonoBehaviour
         Invoke("ReturnSprite", 0.1f);
         if (health <= 0)
         {
+            Player playerLogic = player.GetComponent<Player>();
+            playerLogic.score += enemyScore;
             //Destroy(this);
             Destroy(gameObject);
         }
