@@ -1,0 +1,6 @@
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\Temp\bin\Debug\Assembly-CSharp.dll
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\obj\Debug\Assembly-CSharp.dll
+D:\git_repo\new_repo\MyCodes\003_자기개발\UnityProject\2D_ShootingGame\obj\Debug\Assembly-CSharp.pdb
