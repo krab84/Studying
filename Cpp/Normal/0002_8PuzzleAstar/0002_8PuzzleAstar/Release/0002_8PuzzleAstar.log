@@ -1,0 +1,15 @@
+﻿  main.cpp
+  Puzzle.cpp
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(191): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(192): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(218): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(263): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(265): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(294): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(295): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(387): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\git_repo\new_repo\mycodes\003_자기계발\0002_8puzzleastar\0002_8puzzleastar\puzzle.cpp(388): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  코드를 생성하고 있습니다.
+  All 397 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  0002_8PuzzleAstar.vcxproj -> D:\git_repo\new_repo\MyCodes\003_자기계발\0002_8PuzzleAstar\Release\0002_8PuzzleAstar.exe
